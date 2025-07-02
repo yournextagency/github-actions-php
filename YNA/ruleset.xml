@@ -31,70 +31,70 @@
     <!-- Import Zend coding standard (which in turn imports PEAR) -->
     <rule ref="Zend">
 
-       <!-- but exclude their code analyzer -->
-       <exclude name="Zend.Debug.CodeAnalyzer"/>
+        <!-- but exclude their code analyzer -->
+        <exclude name="Zend.Debug.CodeAnalyzer"/>
 
-       <!-- covered by Squiz ControlSignature, which enforces try/catch as well -->
-       <exclude name="PEAR.ControlStructures.ControlSignature"/>
-       <exclude name="PEAR.Commenting.FunctionComment.SpacingBeforeTags"/>
+        <!-- covered by Squiz ControlSignature, which enforces try/catch as well -->
+        <exclude name="PEAR.ControlStructures.ControlSignature"/>
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingBeforeTags"/>
 
-       <!-- covered by Squiz FunctionDeclarationSniff -->
-       <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
+        <!-- covered by Squiz FunctionDeclarationSniff -->
+        <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine"/>
 
-       <!-- covered by YNA ValidVariableName -->
-	   <exclude name="Zend.NamingConventions.ValidVariableName.NotCamelCaps"/>
-   </rule>
+        <!-- covered by YNA ValidVariableName -->
+        <exclude name="Zend.NamingConventions.ValidVariableName.NotCamelCaps"/>
+    </rule>
 
-   <rule ref="Generic.Files.LineLength">
-      <properties>
-       <property name="lineLimit" value="100"/>
-       <property name="absoluteLineLimit" value="120"/>
-      </properties>
-   </rule>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="100"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
 
-   <!-- Allow string concatenation across lines -->
-   <rule ref="Squiz.Strings.ConcatenationSpacing">
-      <properties>
-         <property name="ignoreNewlines" value="true"/>
-      </properties>
-   </rule>
+    <!-- Allow string concatenation across lines -->
+    <rule ref="Squiz.Strings.ConcatenationSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true"/>
+        </properties>
+    </rule>
 
-   <!-- Valid YNA namings, ;-separated -->
-   <rule ref="YNA.NamingConventions.ValidVariableName">
-	  <properties>
-	     <property name="ynaOkVariables" value="I;"/>
-      </properties>
-   </rule>
+    <!-- Valid YNA namings, ;-separated -->
+    <rule ref="YNA.NamingConventions.ValidVariableName">
+        <properties>
+            <property name="ynaOkVariables" value="I;"/>
+        </properties>
+    </rule>
 
-   <!-- Don't enforce Zend's private member underscores -->
-   <rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
-       <severity>0</severity>
-   </rule>
+    <!-- Don't enforce Zend's private member underscores -->
+    <rule ref="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore">
+        <severity>0</severity>
+    </rule>
 
-   <rule ref="YNA.NamingConventions.ValidVariableName.PrivateNoUnderscore">
-       <severity>0</severity>
-   </rule>
+    <rule ref="YNA.NamingConventions.ValidVariableName.PrivateNoUnderscore">
+        <severity>0</severity>
+    </rule>
 
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
         <exclude-pattern>*/tests/*</exclude-pattern>
     </rule>
-   <!-- Ignore variables that contains numbers -->
-   <rule ref="Zend.NamingConventions.ValidVariableName.ContainsNumbers">
-       <severity>0</severity>
-   </rule>
+    <!-- Ignore variables that contains numbers -->
+    <rule ref="Zend.NamingConventions.ValidVariableName.ContainsNumbers">
+        <severity>0</severity>
+    </rule>
 
-   <!-- Disable Zend multiline function calls spacing -->
-   <rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
-       <severity>0</severity>
-   </rule>
+    <!-- Disable Zend multiline function calls spacing -->
+    <rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
+        <severity>0</severity>
+    </rule>
 
-   <rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterCloseBracket">
-       <severity>0</severity>
-   </rule>
+    <rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterCloseBracket">
+        <severity>0</severity>
+    </rule>
 
-   <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
-       <severity>0</severity>
-   </rule>
+    <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+        <severity>0</severity>
+    </rule>
 
     <rule ref="PEAR.Functions.FunctionCallSignature.OpeningIndent">
         <severity>0</severity>
@@ -104,9 +104,9 @@
         <severity>0</severity>
     </rule>
 
-   <rule ref="YNA.Commenting.FunctionComment.MissingParamComment">
-       <severity>0</severity>
-   </rule>
+    <rule ref="YNA.Commenting.FunctionComment.MissingParamComment">
+        <severity>0</severity>
+    </rule>
 
     <rule ref="YNA.Files.AlphanumericFilename.Invalid">
         <exclude-pattern>*/translations/*</exclude-pattern>
@@ -116,27 +116,35 @@
         <severity>0</severity>
     </rule>
 
-   <rule ref="YNA.Commenting.FunctionComment.Missing">
-       <type>error</type>
-   </rule>
+    <rule ref="YNA.Commenting.FunctionComment.Missing">
+        <type>error</type>
+    </rule>
 
-   <rule ref="YNA.Commenting.ClassComment.Missing">
-       <type>error</type>
-   </rule>
+    <rule ref="YNA.Commenting.FunctionComment.MissingReturnType">
+        <severity>0</severity>
+    </rule>
 
-   <rule ref="YNA.Commenting.ClassComment.Blacklisted">
-       <type>error</type>
-   </rule>
+    <rule ref="YNA.Commenting.FunctionComment.MissingParamTag">
+        <severity>0</severity>
+    </rule>
 
-   <rule ref="YNA.Commenting.FunctionComment.MissingReturn">
-       <type>error</type>
-   </rule>
+    <rule ref="YNA.Commenting.ClassComment.Missing">
+        <type>warning</type>
+    </rule>
 
-   <rule ref="YNA.Commenting.FunctionComment.SpacingBeforeTags">
-       <severity>0</severity>
-   </rule>
+    <rule ref="YNA.Commenting.ClassComment.Blacklisted">
+        <type>error</type>
+    </rule>
 
-   <rule ref="YNA.Commenting.ClassComment.SpacingBeforeTags">
-       <message>There should always be a description, followed by a blank line, before the tags of a class comment.</message>
-   </rule>
+    <rule ref="YNA.Commenting.FunctionComment.MissingReturn">
+        <severity>0</severity>
+    </rule>
+
+    <rule ref="YNA.Commenting.FunctionComment.SpacingBeforeTags">
+        <severity>0</severity>
+    </rule>
+
+    <rule ref="YNA.Commenting.ClassComment.SpacingBeforeTags">
+        <message>There should always be a description, followed by a blank line, before the tags of a class comment.</message>
+    </rule>
 </ruleset>

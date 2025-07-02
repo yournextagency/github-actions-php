@@ -67,7 +67,8 @@ class ValidVariableNameSniff extends AbstractVariableSniff
                         $objVarName = substr($objVarName, 1);
                     }
 
-                    if (Common::isCamelCaps($objVarName, false, true, false) === false) {
+                    if (Common::isCamelCaps($objVarName, false, true, false) === false
+                            && ((bool) preg_match('/^[a-z]+(_[a-z0-9]+)*$/', $objVarName)) === false) {
                         $error = 'Variable "%s" is not in valid camel caps format';
                         $data  = [$originalVarName];
                         $phpcsFile->addError($error, $var, 'NotCamelCaps', $data);
@@ -99,7 +100,8 @@ class ValidVariableNameSniff extends AbstractVariableSniff
             }
         }
 
-        if (Common::isCamelCaps($varName, false, true, false) === false) {
+        if (Common::isCamelCaps($varName, false, true, false) === false
+                && ((bool) preg_match('/^[a-z]+(_[a-z0-9]+)*$/', $varName)) === false) {
             $error = 'Variable "%s" is not in valid camel caps format';
             $data  = [$originalVarName];
             $phpcsFile->addError($error, $stackPtr, 'NotCamelCaps', $data);
@@ -154,7 +156,8 @@ class ValidVariableNameSniff extends AbstractVariableSniff
         // Remove a potential underscore prefix for testing CamelCaps.
         $varName = ltrim($varName, '_');
 
-        if (Common::isCamelCaps($varName, false, true, false) === false) {
+        if (Common::isCamelCaps($varName, false, true, false) === false
+                && ((bool) preg_match('/^[a-z]+(_[a-z0-9]+)*$/', $varName)) === false) {
             $error = 'Member variable "%s" is not in valid camel caps format';
             $data  = [$varName];
             $phpcsFile->addError($error, $stackPtr, 'MemberVarNotCamelCaps', $data);
@@ -187,7 +190,8 @@ class ValidVariableNameSniff extends AbstractVariableSniff
                     continue;
                 }
 
-                if (Common::isCamelCaps($varName, false, true, false) === false) {
+                if (Common::isCamelCaps($varName, false, true, false) === false
+                        && ((bool) preg_match('/^[a-z]+(_[a-z0-9]+)*$/', $varName)) === false) {
                     $error = 'Variable "%s" is not in valid camel caps format';
                     $data  = [$varName];
                     $phpcsFile->addError($error, $stackPtr, 'StringVarNotCamelCaps', $data);

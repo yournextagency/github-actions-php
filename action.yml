@@ -4,7 +4,7 @@ inputs:
   phpcs_paths:
     description: 'Paths to check'
     required: false
-    default: './modules'
+    default: './app'
   enable_warnings:
     description: 'Enable checking for warnings (-w)'
     required: false
