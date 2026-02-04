@@ -136,7 +136,17 @@
        <severity>0</severity>
    </rule>
 
-   <rule ref="YNA.Commenting.ClassComment.SpacingBeforeTags">
+
+    <!-- Use Assignment in Condition rule instead of YODA -->
+    <rule ref="Generic.CodeAnalysis.AssignmentInCondition">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="YNA.ControlStructure.YodaConditions">
+        <severity>0</severity>
+    </rule>
+
+    <rule ref="YNA.Commenting.ClassComment.SpacingBeforeTags">
        <message>There should always be a description, followed by a blank line, before the tags of a class comment.</message>
    </rule>
 </ruleset>
