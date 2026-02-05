@@ -17,6 +17,10 @@ inputs:
     description: 'Paths to ignore'
     required: false
     default: '*/tests/*,*/data/*,*/libraries/*'
+  phpcs_extensions:
+    description: 'Comma-separated file extensions'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
