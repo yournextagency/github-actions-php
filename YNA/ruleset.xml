@@ -43,6 +43,9 @@
 
        <!-- covered by YNA ValidVariableName -->
 	   <exclude name="Zend.NamingConventions.ValidVariableName.NotCamelCaps"/>
+
+       <!-- covered by YNA ValidVariableName -->
+	   <exclude name="Zend.NamingConventions.ValidVariableName.MemberVarNotCamelCaps"/>
    </rule>
 
    <rule ref="Generic.Files.LineLength">
