@@ -58,7 +58,7 @@ You can set YNA standard as default:
 then
 `phpcs /path/to/php/class.php`
 
-For more usage cases check [official documentation](https://github.com/squizlabs/PHP_CodeSniffer/wiki "Title")
+For more usage cases check [official documentation](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki "Title")
 
 ### Use CodeSniffer in PHPStorm
 - `Preferences -> Languages & Frameworks -> PHP -> Quality tools -> Code Sniffer`
