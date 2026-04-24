@@ -21,6 +21,10 @@ inputs:
     description: 'Comma-separated file extensions'
     required: false
     default: ''
+  ignore_warnings_on_exit:
+    description: 'Exit with 0 when only warnings are found (no errors)'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
